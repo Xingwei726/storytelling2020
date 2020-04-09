@@ -1,0 +1,114 @@
+#scrolly {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*background-color: #f3f3f3;*/
+    padding: 1rem;
+}
+
+#scrolly > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+article {
+    position: relative;
+    padding: 0 1rem;
+    max-width: 20rem;
+    /*width:40%;*/
+}
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    /*width: 60%;*/
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: #8a8a8a;
+    z-index: 0;
+}
+
+figure p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*font-size: 8rem;*/
+    /*font-weight: 900;*/
+    /*color: #ffffff;*/
+      font-size: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.step {
+    margin: 0 auto 2rem auto;
+    background-color: goldenrod;
+    color: #fff;
+    opacity:0.2;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step.is-active {
+    background-color: goldenrod;
+    color: #3b3b3b;
+    opacity:1;
+}
+
+.step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+
+
+/*Scroll Icon Animation*/
+.scroll-downs {
+  position: absolute;
+  top: 500px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width :30px;
+  height: 55px;
+}
+.mousey {
+  /*margin-top:320px;*/
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #3b3b3b;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #194F39;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0;}
+}
