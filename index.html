@@ -9,7 +9,6 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i,700,900&display=swap" rel="stylesheet">      
         <meta name="description" content="Scrollama: Sticky Side Example" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="scrolly.css" />
 
@@ -37,7 +36,7 @@
           <!--Article is the text part---Scrolly-->
             <article>
               <div class="step" data-step="0">
-                <p>What's a scam?</p>
+                <p>STEP 1</p>
               </div>
               <div class="step" data-step="1">
                 <p>STEP 2</p>
@@ -53,11 +52,26 @@
           <!--Figure is the graph part---sticky-->
             <figure>
               <p>0</p>
+              <div id="graph"></div>
             </figure>
             
           </section>
  
- 
+         <div id="graph1"></div>
+
+         <section id="intro">
+           <h2 class="intro__hed">From 2009 to 2019, scammers are envolving...What's different and what has stayed the same?</h1>
+         </section>
+
+         <div id="graph2"></div>
+         
+
+          <!--<div id="slide">-->
+          <!--  <div class="active2">-->
+          <!--      <h2>Once Upon A Time</h2>-->
+          <!--      <p>The cacao plant was first given its botanical name by Swedish natural scientist Carl Linnaeus, where he called it Theobroma Cacao, meaning <b>food of the gods</b> in Greek. Human usage of cocoa beans can be traced back to 4,000 years ago. Long before Richard Cadbury first put chocolates in a <b>heart-shaped box</b> for Valentine's day, it was an important part of Mayan <b>wedding rituals</b>. The bride and groom would exchange hot chocolate beverages during the ceremony, this tradition foreshadows chocolate's future status as a universal expression of love. </p>-->
+          <!--  </div>-->
+          <!--</div>-->
  
             
           <!--Outro is the part after---sticky-->
@@ -68,8 +82,8 @@
         <!-- References Links -->
         <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
         <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-        <script src="stickyfill.min.js"></script>
-        <script src="scrollama.min.js"></script>
+        <script src="./libraries/stickyfill.min.js"></script>
+        <script src="./libraries/scrollama.min.js"></script>
         <script src="script.js"></script>
         <script src='https://d3js.org/d3.v5.min.js'></script>
       </body>
