@@ -125,7 +125,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 		//             .style("opacity", 0)
 		//             .style("position", "absolute")
 		//             .style("color", "#000000")
-		//             .style("background", "#FFFAF0")
+		//             .style("background", "#e8e8e8")
 		// 			.style("font-family", "Source Sans Pro")
 		// 			.style("font-size", "12px")
 		//             .style("padding", "8px")
@@ -138,7 +138,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 		
 		var mouseleave = function (d) {
 		    d3.select(this)
-		      .attr('fill', '#FFFAF0')
+		      .attr('fill', '#e8e8e8')
 		} 
 		
 		var background = svg1.append('g')
@@ -167,7 +167,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("rx",5)
 					        .attr("ry",5)			        
 				            .attr("height", "40px")
-				            .attr('fill', '#FFFAF0')
+				            .attr('fill', '#e8e8e8')
 				            .on("mouseover",mouseover)
 				            .on("mouseleave",mouseleave)
 				  
@@ -187,7 +187,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("rx",5)
 					        .attr("ry",5)
 				            .attr("height", "40px")
-				            .attr('fill', '#FFFAF0')
+				            .attr('fill', '#e8e8e8')
 				            .on("mouseover",mouseover)
 				            .on("mouseleave",mouseleave)		            
 				 
@@ -242,7 +242,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFAF0")
+				        .attr("fill", "#e8e8e8")
 				        .text(function (d,i) {
 				            return i+1;
 				        })  
@@ -259,7 +259,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFAF0")
+				        .attr("fill", "#e8e8e8")
 				        .text(function (d,i) {
 				            return i+1;
 				        })  
@@ -279,7 +279,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFAF0")
+				        .attr("fill", "#e8e8e8")
 				        .text(function (d,i) {
 				            return d.percentage1;
 				        }) 				        
@@ -299,7 +299,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFAF0")
+				        .attr("fill", "#e8e8e8")
 				        .text(function (d,i) {
 				            return d.percentage2;
 				        }) 				        
@@ -330,7 +330,7 @@ d3.csv("./data/test.csv").then(function(data) {
             .append("div")
             .style("opacity", 0)
             .style("position", "absolute")
-            .style("color", "#FFFAF0")
+            .style("color", "#e8e8e8")
             .style("background", "#000000")
 			.style("font-family", "Source Sans Pro")
 			.style("font-size", "14px")

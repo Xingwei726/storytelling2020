@@ -35,7 +35,7 @@ h5 {
   font-size: 30px;
   margin-top:50px;
 
-  /*width: 400px;*/
+  width: 400px;
 }
 
 
@@ -118,7 +118,7 @@ P {
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 30px;
-  background-color: #FFFAF0;
+  background-color: #e8e8e8;
   height:675px;
   /*border: 2px solid #4CAF50;*/
   /*margin-top: 200px;*/
@@ -127,9 +127,9 @@ P {
 .button {
   border: 1px solid black;
   border-radius:20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  font-family: "courier";
+  font-family: 'Source Sans Pro', sans-serif;
   color:#000000;
   background:none;
   /*stroke:#000000;*/
@@ -141,15 +141,51 @@ P {
 
 .button:hover {
   background:#000000;
-  color:#FFFAF0;
+  color:#e8e8e8;
   cursor: pointer;
 }
 
 .button:focus {
    background:#000000;
-  color:#FFFAF0;
+  color:#e8e8e8;
   cursor: pointer; 
 }
+
+
+.buttonWhite {
+  border-radius:20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#e8e8e8;
+  border: 1px solid #e8e8e8;
+  background:none;
+  width:150px;
+  margin-right:20px;
+  margin-left:20px;
+  margin-top:30px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.buttonWhite:hover {
+  background:#e8e8e8;
+  color:#000000;
+  cursor: pointer;
+}
+
+.buttonWhite:focus {
+  background:#e8e8e8;
+  color:#000000;
+  cursor: pointer; 
+}
+
+
+
+
+
 
 /*.sticky2 h5 {*/
 /*   color: #000000;*/
@@ -163,4 +199,59 @@ P {
   position: sticky;
   padding-top:50px;
   padding-bottom:50px;
+}
+
+.tooltip {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+}
+
+
+.stickyfloating {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 99;
+  /*top:100px;*/
+  bottom:200px;
+  left: 500px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #000000;
+  width:500px;
+  /*opacity:0.75;*/
+  /*border-radius: 5px;*/
+}
+
+.stickyfloating p {
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400; 
+  color: #e8e8e8;
+  padding-top: 20px;
+  padding-bottom:10px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.stickyfloating h3 {
+  font-size: 24px;
+  font-family: 'EB Garamond', serif;
+  font-style: normal;
+  font-weight: 400; 
+  color: #e8e8e8;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+#textbox1, #textbox2 {
+    display: inline-block;
+    float: left;    
+    width: 200px;    
+    /*height: 100px;    */
 }

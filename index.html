@@ -15,7 +15,7 @@
         <script src="https://d3js.org/d3.v5.js"></script>
       </head>
 
-      <body style="background-color:#FFFAF0;">
+      <body style="background-color:#e8e8e8;">
         <main>
           <section id="intro">
             <h1 class="intro__hed">Too Cool to be Scammed</h1>
@@ -70,22 +70,24 @@
           <!--2.1 Delivery Method-->
           <div id="graph2"></div>
 
+
           <!--2.2 Scam Types by Geography-->
           <div>
            <img id="image3" src="./images/geography.svg">
           </div>
 
+
           <!--<div id="gender"></div>-->
 
           <!--2.3 Gender-->
-              <div class="slide2">
-                  <div class="sticky2">
-                      <h5>Susceptibility & Median Money Loss Between Genders</h5>
-                      <button class="button" onclick="changeTree(1)">2009</button>
-                      <button class="button" onclick="changePod(1)">2019</button>
-                      <div id="gender"></div>
-                  </div>
-              </div> 
+          <div class="slide2">
+                <div class="sticky2">
+                    <h5>Susceptibility & Median Money Loss Between Genders</h5>
+                    <button class="button" onclick="changeTree(1)">2009</button>
+                    <button class="button" onclick="changePod(1)">2019</button>
+                    <div id="gender"></div>
+                </div>
+          </div> 
 
 
           <section id="intro">
@@ -99,7 +101,35 @@
                       <h5>Susceptibility & Median Money Loss by Ages in 2019</h5>
                       <div id="age"></div>
                   </div>
+                  
+                  <div class="stickyfloating">
+                      <h3>From <b>A</b> to <b>F</b>, which age group would you choose to correspond with these two datasets?</h3>
+                      <!--  <input type="radio" id="young" name="age" value="young">-->
+                      <!--  <span for="young"><p>A represents 20 years old, <br/> F represents 60 years old</p></span>-->
+                      <!--  <input type="radio" id="old" name="age" value="old">-->
+                      <!--  <span for="old"><p>F represents 20 years old, <br/> A represents 60 years old</p></span>-->
+                      <span id="textbox1"><p><b>1. </b> Group A represents 20 years old, group F represents 60 years and older.</p></span>
+                      <span id="textbox2"><p><b>2. </b> Group F represents 20 years old, group A represents 60 years and older.</p></span>
+                      <button class="buttonWhite" onclick="alert('Yeah, you got the right answer!')"> Answer 1</button>
+                      <button class="buttonWhite" onclick="alert('Oops, try it again!')">Answer 2</button>
+
+                      <!--<span><p>A represents 20 years old, <br/> F represents 60 years old</p></span>-->
+                      <!--<span><p>F represents 20 years old, <br/> A represents 60 years old</p></span>-->
+                  </div> 
+                    
               </div> 
+
+
+
+          <div class="slide2">
+                <div class="sticky2">
+                    <h5>Research Findings</h5>
+                    <p>research findings </p>
+                </div>
+          </div> 
+
+
+
 
 
           <!--<div id="slide">-->
