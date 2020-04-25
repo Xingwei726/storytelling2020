@@ -89,11 +89,11 @@ var rect = svg.append ("g")
 		      .attr('y', 100) 
 		      .attr('width', 100)
 		      .attr('height', 100)
-		      .attr('fill', 'tomato')
+		      .attr('fill', '#C373FC')
 		      //.style("opacity", 0)
       
 
-//Top 10 2009 vs 2019 
+//Top 10 Rickest Scams 2009 vs 2019 
 
 var category2009=[];
 var percentage2009=[];
@@ -133,12 +133,12 @@ d3.csv("./data/top10.csv").then(function(data) {
 		
 		var mouseover = function (d) {
 		    d3.select(this)
-		      .attr('fill', 'tomato')
+		      .attr('fill', '#C373FC')
 		}
 		
 		var mouseleave = function (d) {
 		    d3.select(this)
-		      .attr('fill', '#FFFFFF')
+		      .attr('fill', '#FFFAF0')
 		} 
 		
 		var background = svg1.append('g')
@@ -167,7 +167,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("rx",5)
 					        .attr("ry",5)			        
 				            .attr("height", "40px")
-				            .attr('fill', '#FFFFFF')
+				            .attr('fill', '#FFFAF0')
 				            .on("mouseover",mouseover)
 				            .on("mouseleave",mouseleave)
 				  
@@ -187,7 +187,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("rx",5)
 					        .attr("ry",5)
 				            .attr("height", "40px")
-				            .attr('fill', '#FFFFFF')
+				            .attr('fill', '#FFFAF0')
 				            .on("mouseover",mouseover)
 				            .on("mouseleave",mouseleave)		            
 				 
@@ -242,7 +242,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFFFF")
+				        .attr("fill", "#FFFAF0")
 				        .text(function (d,i) {
 				            return i+1;
 				        })  
@@ -259,9 +259,251 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
 				        .style("font-size", "12px")
-				        .attr("fill", "#FFFFFF")
+				        .attr("fill", "#FFFAF0")
 				        .text(function (d,i) {
 				            return i+1;
-				        })  	          
+				        })  
+				        
+		var onePercent = svg1
+		                .append('g')
+  		                .selectAll('text')
+		                .data(data)
+				        .enter()
+				        .append("text")
+				        .attr("x", function (d){
+				            	return xScale1(d.percentage1)+100
+				            })
+				        .attr("y", function(d,i){
+				        	return 175 + i*45
+				        })
+				        .attr("text-anchor", "right")
+				        .attr("font-family", "sans-serif")
+				        .style("font-size", "12px")
+				        .attr("fill", "#FFFAF0")
+				        .text(function (d,i) {
+				            return d.percentage1;
+				        }) 				        
+
+		var twoPercent = svg1
+		                .append('g')
+  		                .selectAll('text')
+		                .data(data)
+				        .enter()
+				        .append("text")
+				        .attr("x", function (d){
+				            	return xScale2(d.percentage2)+800
+				            })
+				        .attr("y", function(d,i){
+				        	return 175 + i*45
+				        })
+				        .attr("text-anchor", "right")
+				        .attr("font-family", "sans-serif")
+				        .style("font-size", "12px")
+				        .attr("fill", "#FFFAF0")
+				        .text(function (d,i) {
+				            return d.percentage2;
+				        }) 				        
 	         
 });	         
+
+
+
+//Delivery Method 2009 vs 2019 
+
+
+
+d3.csv("./data/test.csv").then(function(data) {
+	
+    d3.csv("./data/test2.csv").then(function(data2) {
+
+		var svg2 = d3.select('#graph2')
+			         .append('svg')
+			         .attr('width', "100%")
+			         .attr('height', 750)
+
+		var horizontalScale = d3.scaleLinear()
+			           .domain([0, 100])
+			           .range([10, 1000])
+			           
+	    var tooltip = d3.select("#graph2")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .append("div")
+            .style("opacity", 0)
+            .style("position", "absolute")
+            .style("color", "#FFFAF0")
+            .style("background", "#000000")
+			.style("font-family", "Source Sans Pro")
+			.style("font-size", "14px")
+            .style("padding", "8px")
+            .style("z-index", "1000")
+
+        var mouseover = function (d) {
+               tooltip
+                  .style("opacity", 1)
+                  .html(d.type+"<br/>"+ d.percentage + " %") 
+                  .style('left', (d3.event.pageX+12) + 'px')
+                  .style('top', (d3.event.pageY) + 'px')
+
+                d3.select(this)
+                  .attr("fill", "#C373FC")
+
+        }
+        
+        var mouseleave = function (d) {
+                tooltip
+                  .style("opacity", 0);
+                d3.select(this)
+                  .attr("fill", "#000000")
+        }
+
+
+
+        //2009 Graph
+        svg2.append('g')
+            .selectAll('rect')
+			.data(data)
+			.enter()
+			.append('rect')
+			.attr('x', function (d,i){
+               return 100 + horizontalScale(d.total) + 12*i			
+				
+			}) 
+			.attr('y', "100px")
+			.attr("width", function (d){
+			     return horizontalScale(d.percentage)
+			})
+			.attr("height", "100px")
+			.attr('fill', '#000000')
+			.on("mouseover", mouseover)
+			.on("mouseleave", mouseleave)
+
+	   
+	    //2009 legend		
+	    svg2.append("text")
+			.attr("x", "112px")
+			.attr("y", "20px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "EB Garamond")
+			.style("font-size", "30px")
+			.attr("fill", "#000000")
+			.text("Scams Delivery Method (% Total)")
+
+	    //2009 legend		
+	    svg2.append("text")
+			.attr("x", "112px")
+			.attr("y", "80px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "Source Sans Pro")
+			.style("font-size", "22px")
+			.attr("fill", "#000000")
+			.text("2009")
+
+		svg2.append('g')
+		  .selectAll('text')
+		  .data(data)
+		  .enter()
+		  .append('text')
+		  .attr("x", "1230px")
+		  .attr("y", function (d,i) {
+               return i*20+60			
+		  })
+		  .attr("text-anchor", "left")
+		  .attr("font-family", "Source Sans Pro")
+		  .style("font-size", "12px")
+		  .attr("fill", "#000000")
+		  .text(function(d,i) {
+			   		return (i+1) + ". "+  d.type + ": " + d.percentage + " %";
+			})
+			
+		svg2.append('g')
+		   .selectAll('text')
+		   .data(data)
+		   .enter()
+		   .append('text')
+		   .attr("x", function (d,i){
+               return 100 + horizontalScale(d.total) + 12*i			
+			})
+		   .attr("y", "220px")
+		   .attr("text-anchor", "left")
+		   .attr("font-family", "Source Sans Pro")
+		   .style("font-size", "12px")
+		   .attr("fill", "#000000")
+		   .text(function(d,i) {
+			   		return i+1;
+			})
+			
+			
+			
+
+
+
+
+//2019    
+        svg2.append('g')
+            .selectAll('rect')
+			.data(data2)
+			.enter()
+			.append('rect')
+			.attr('x', function (d,i){
+               return 100 + horizontalScale(d.total) + 12*i			
+				
+			}) 
+			.attr('y', "350px")
+			.attr("width", function (d){
+			     return horizontalScale(d.percentage)
+			})
+			.attr("height", "100px")
+			.attr('fill', '#000000') 
+			.on("mouseover", mouseover)
+			.on("mouseleave", mouseleave)			
+
+        //2019 legend
+	    svg2.append("text")
+			.attr("x", "112px")
+			.attr("y", "330px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "Source Sans Pro")
+			.style("font-size", "22px")
+			.attr("fill", "#000000")
+			.text("2019")
+
+
+		svg2.append('g')
+		  .selectAll('text')
+		  .data(data2)
+		  .enter()
+		  .append('text')
+		  .attr("x", "1230px")
+		  .attr("y", function (d,i) {
+               return i*20+310			
+		  })
+		  .attr("text-anchor", "left")
+		  .attr("font-family", "Source Sans Pro")
+		  .style("font-size", "12px")
+		  .attr("fill", "#000000")
+		  .text(function(d,i) {
+			   		return (i+1) + ". "+  d.type + ": " + d.percentage + " %";
+			})
+			
+		svg2.append('g')
+		   .selectAll('text')
+		   .data(data2)
+		   .enter()
+		   .append('text')
+		   .attr("x", function (d,i){
+               return 100 + horizontalScale(d.total) + 12*i			
+			})
+		   .attr("y", "470px")
+		   .attr("text-anchor", "left")
+		   .attr("font-family", "Source Sans Pro")
+		   .style("font-size", "12px")
+		   .attr("fill", "#000000")
+		   .text(function(d,i) {
+			   		return i+1;
+			})
+
+    
+    
+    })
+
+})
