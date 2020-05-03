@@ -32,11 +32,13 @@ function handleStepEnter(response) {
 
 	// update graphic based on step
     if (response.index < 1) {
-   	  figure.select("p").text("Scam: A scam is a fraudulent scheme generally involving money and some sort of business transaction.");
-    } else if (response.index  < 2) {
-      figure.select("p").text("next definition");
+   	  figure.select("h6").text("Before we dive into the project, let's clarify some definitions first.");
+    } else if (response.index  < 2) {  
+      figure.select("h6").text("Scam [n.]: A scam is a fraud ulent scheme generally involving money and some sort of business transaction.");
+    } else if (response.index  < 3)  {
+      figure.select("h6").text("Susceptibility [n.]: The state of being very likely to be influenced, harmed or affected by sth.");
     } else {
-      figure.select("p").text("next definition");
+      figure.select("h6").text("Below you will see two real-life scenarios, pick an answer from the dialogue box.");
     }
 
 }
@@ -71,25 +73,25 @@ init();
 
 
 //shape on the definition slide
-var width = 1440,
-    height = 700;
-var margin = { top: 200, right: 50, bottom: 200, left: 50 },
-    width2 = width - margin.left - margin.right,
-    height2 = height - margin.top - margin.bottom;
+// var width = 1440,
+//     height = 700;
+// var margin = { top: 200, right: 50, bottom: 200, left: 50 },
+//     width2 = width - margin.left - margin.right,
+//     height2 = height - margin.top - margin.bottom;
 
 
-var svg = d3.select('#graph')
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height);
+// var svg = d3.select('#graph')
+//       .append('svg')
+//       .attr('width', width)
+//       .attr('height', height);
       
-var rect = svg.append ("g")
-		      .append("rect")
-		      .attr('x', 100)
-		      .attr('y', 100) 
-		      .attr('width', 100)
-		      .attr('height', 100)
-		      .attr('fill', '#C373FC')
+// var rect = svg.append ("g")
+// 		      .append("rect")
+// 		      .attr('x', 100)
+// 		      .attr('y', 100) 
+// 		      .attr('width', 100)
+// 		      .attr('height', 100)
+// 		      .attr('fill', '#C373FC')
 		      //.style("opacity", 0)
       
 
@@ -104,7 +106,7 @@ d3.csv("./data/top10.csv").then(function(data) {
         category2009.push(data[i].first);
         percentage2009.push(data[i].percentage1);
     }
-// console.log (percentage)
+
 
 		var svg1 = d3.select('#graph1')
 			         .append('svg')
@@ -112,34 +114,64 @@ d3.csv("./data/top10.csv").then(function(data) {
 			         .attr('height', 750)
 			         
 		var xScale1 = d3.scaleLinear()
-			           .domain([1, 17])
+			           .domain([1, 155])
 			           .range([0, width2/2-100])
 			           
 		var xScale2 = d3.scaleLinear()
 			           .domain([1, 155])
 			           .range([0, width2/2-100])	           
 		
-		// var tooltip1 = d3.select("#graph1")
-		//             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-		//             .append("div")
-		//             .style("opacity", 0)
-		//             .style("position", "absolute")
-		//             .style("color", "#000000")
-		//             .style("background", "#e8e8e8")
-		// 			.style("font-family", "Source Sans Pro")
-		// 			.style("font-size", "12px")
-		//             .style("padding", "8px")
-		//             .style("z-index", "1000")
-		
-		var mouseover = function (d) {
+		var tooltip1 = d3.select("#graph1")
+		            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+		            .append("div")
+		            .style("opacity", 0)
+		            .style("position", "absolute")
+		            .style("color", "#e8e8e8")
+		            .style("background", "#000000")
+					.style("font-family", "Source Sans Pro")
+					.style("font-size", "14px")
+		            .style("padding", "8px")
+		            .style("z-index", "1000")
+				
+		var mouseover1 = function (d) {
+			tooltip1
+                  .style("opacity", 1)
+                  .html(d.first+ "<br/>"+ d.percentage1 + " %") 
+                  .style('left', (d3.event.pageX+12) + 'px')
+                  .style('top', (d3.event.pageY) + 'px')
 		    d3.select(this)
 		      .attr('fill', '#C373FC')
+
+		    
 		}
 		
-		var mouseleave = function (d) {
+		var mouseleave1 = function (d) {
+			tooltip1
+                  .style("opacity", 0)	
 		    d3.select(this)
 		      .attr('fill', '#e8e8e8')
+	      
 		} 
+		
+		var mouseover2 = function (d) {
+			tooltip1
+                  .style("opacity", 1)
+                  .html(d.second+ "<br/>"+ d.percentage2 + " %") 
+                  .style('left', (d3.event.pageX+12) + 'px')
+                  .style('top', (d3.event.pageY) + 'px')
+		    d3.select(this)
+		      .attr('fill', '#C373FC')
+
+		    
+		}
+		
+		var mouseleave2 = function (d) {
+			tooltip1
+                  .style("opacity", 0)	
+		    d3.select(this)
+		      .attr('fill', '#e8e8e8')
+	      
+		}
 		
 		var background = svg1.append('g')
 		            .append('rect')
@@ -148,11 +180,57 @@ d3.csv("./data/top10.csv").then(function(data) {
 			        .attr('y', 0)
 		            .attr("height", "800px")
 		            .attr('fill', '#000000')
-		
+// graph title
+	    svg1.append('g')
+	        .append('text')
+			.attr("x", "60px")
+			.attr("y", "100px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "EB Garamond")
+			.style("font-size", "30px")
+		    .attr("fill", "#e8e8e8")
+			.text("Top 10 Rickest Scams")	
+
+// risk calculation formula
+
+	    svg1.append('g')
+	        .append('text')
+			.attr("x", "60px")
+			.attr("y", "140px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "EB Garamond")
+			.style("font-size", "16px")
+		    .attr("fill", "#e8e8e8")
+			.text("BBB Risk Index = Exposure × Susceptibility x (Median Loss / Overall Median Loss) x 1,000.")
+
+
+			
+// 2009
+	    svg1.append('g')
+	        .append('text')
+			.attr("x", "90px")
+			.attr("y", "190px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "EB Garamond")
+			.style("font-size", "18px")
+		    .attr("fill", "#C373FC")
+			.text("2009")
+
+
+// 2019
+	    svg1.append('g')
+	        .append('text')
+			.attr("x", "790px")
+			.attr("y", "190px")
+			.attr("text-anchor", "left")
+			.attr("font-family", "EB Garamond")
+			.style("font-size", "18px")
+		    .attr("fill", "#C373FC")
+			.text("2019")
 		
 		//2009 & 2019 bar charts            
 		var barchart1 = svg1.append('g')
-				            .attr("transform", "translate(70,0)")
+				            .attr("transform", "translate(70,50)")
 				            .selectAll('rect')
 				            .data(data)
 				            .enter()
@@ -168,11 +246,11 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("ry",5)			        
 				            .attr("height", "40px")
 				            .attr('fill', '#e8e8e8')
-				            .on("mouseover",mouseover)
-				            .on("mouseleave",mouseleave)
+				            .on("mouseover",mouseover1)
+				            .on("mouseleave",mouseleave1)
 				  
 		var barchart2 = svg1.append('g')
-				            .attr("transform", "translate(70,0)")
+				            .attr("transform", "translate(70,50)")
 				            .selectAll('rect')
 				            .data(data)
 				            .enter()
@@ -188,12 +266,12 @@ d3.csv("./data/top10.csv").then(function(data) {
 					        .attr("ry",5)
 				            .attr("height", "40px")
 				            .attr('fill', '#e8e8e8')
-				            .on("mouseover",mouseover)
-				            .on("mouseleave",mouseleave)		            
+				            .on("mouseover",mouseover2)
+				            .on("mouseleave",mouseleave2)		            
 				 
 		//both x-axis		            
 		var xAxis1 = svg1.append('g')
-		                .attr("transform", "translate(70,0)")
+		                .attr("transform", "translate(70,50)")
 		                .selectAll('text')
 		                .data(data)
 				        .enter()
@@ -210,7 +288,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				            return d.first;
 				        })
 		var xAxis2 = svg1.append('g')
-		                .attr("transform", "translate(70,0)")
+		                .attr("transform", "translate(70,50)")
 		                .selectAll('text')
 		                .data(data)
 				        .enter()
@@ -230,7 +308,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				        
 		//number on the left                
 		var xAxisNumber1 = svg1.append('g')
-		                .attr("transform", "translate(70,0)")
+		                .attr("transform", "translate(70,50)")
 		                .selectAll('text')
 		                .data(data)
 				        .enter()
@@ -247,7 +325,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				            return i+1;
 				        })  
 		var xAxisNumber2 = svg1.append('g')
-		                .attr("transform", "translate(70,0)")
+		                .attr("transform", "translate(70,50)")
 		                .selectAll('text')
 		                .data(data)
 				        .enter()
@@ -274,7 +352,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				            	return xScale1(d.percentage1)+100
 				            })
 				        .attr("y", function(d,i){
-				        	return 175 + i*45
+				        	return 175 + i*45 + 50
 				        })
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")
@@ -294,7 +372,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 				            	return xScale2(d.percentage2)+800
 				            })
 				        .attr("y", function(d,i){
-				        	return 175 + i*45
+				        	return 175 + i*45 + 50
 				        })
 				        .attr("text-anchor", "right")
 				        .attr("font-family", "sans-serif")

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="770px" viewBox="0 0 1440 770" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>AgeType</title>
+    <desc>Created with Sketch.</desc>
+    <g id="AgeType" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E8E8E8" x="0" y="0" width="1440" height="770"></rect>
+        <text id="&lt;20" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="174" y="279">&lt;20</tspan>
+        </text>
+        <text id="Employment" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="475.305" y="281">Employment</tspan>
+        </text>
+        <g id="Group-15" transform="translate(87.000000, 654.000000)" fill="#000000">
+            <text id="Employment-Copy-4" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="0" y="57">Employment</tspan>
+            </text>
+            <g id="Group" transform="translate(13.000000, 0.000000)">
+                <rect id="Rectangle" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-2" x="0" y="18.6666667" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy" x="0" y="9.33333333" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-3" x="0" y="28" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-14" transform="translate(242.000000, 654.000000)" fill="#000000">
+            <text id="Online-Purchase" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="7.847" y="48">Online </tspan>
+                <tspan x="0" y="64">Purchase</tspan>
+            </text>
+            <g id="Group-2" transform="translate(3.000000, 0.000000)">
+                <rect id="Rectangle-Copy-8" x="0" y="9" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-9" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-10" x="0" y="19" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-12" transform="translate(535.000000, 654.000000)" fill="#000000">
+            <text id="Romance" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="0" y="39">Romance</tspan>
+            </text>
+            <g id="Group-4" transform="translate(5.000000, 0.000000)">
+                <rect id="Rectangle-Copy-4" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-5" x="0" y="9.33333333" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-13" transform="translate(376.000000, 654.000000)" fill="#000000">
+            <text id="Home-Improvement" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="22.33" y="38">Home </tspan>
+                <tspan x="0" y="54">Improvement</tspan>
+            </text>
+            <g id="Group-3" transform="translate(15.000000, 0.000000)">
+                <rect id="Rectangle-Copy-11" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-12" x="0" y="9" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-11" transform="translate(670.000000, 654.000000)" fill="#000000">
+            <text id="Cryptocurrency" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="0" y="38">Cryptocurrency</tspan>
+            </text>
+            <g id="Group-5" transform="translate(20.000000, 0.000000)">
+                <rect id="Rectangle-Copy-13" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-14" x="0" y="9" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-10" transform="translate(840.000000, 654.000000)" fill="#000000">
+            <text id="Investment" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="0" y="38">Investment</tspan>
+            </text>
+            <g id="Group-6" transform="translate(8.000000, 0.000000)">
+                <rect id="Rectangle-Copy-13" x="0" y="0" width="50" height="7"></rect>
+                <rect id="Rectangle-Copy-14" x="0" y="9" width="50" height="7"></rect>
+            </g>
+        </g>
+        <g id="Group-8" transform="translate(1115.000000, 654.000000)" fill="#000000">
+            <text id="Advanced-Fee-Loan" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="0" y="29">Advanced </tspan>
+                <tspan x="2.513" y="45">Fee Loan</tspan>
+            </text>
+            <rect id="Rectangle-Copy-15" x="5" y="0" width="50" height="7"></rect>
+        </g>
+        <g id="Group-7" transform="translate(1255.000000, 654.000000)" fill="#000000">
+            <text id="Travel-Vacation" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="7.329" y="29">Travel </tspan>
+                <tspan x="0" y="45">Vacation</tspan>
+            </text>
+            <rect id="Rectangle-Copy-6" x="1" y="0" width="50" height="7"></rect>
+        </g>
+        <g id="Group-9" transform="translate(986.000000, 654.000000)" fill="#000000">
+            <text id="Money-Order" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16">
+                <tspan x="4" y="29">Money </tspan>
+                <tspan x="6.59" y="45">Order</tspan>
+            </text>
+            <rect id="Rectangle-Copy-7" x="0" y="0" width="50" height="7"></rect>
+        </g>
+        <text id="Money-Order" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="789.284" y="281">Money Order</tspan>
+        </text>
+        <text id="Online-Purchase" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1079.183" y="281">Online Purchase</tspan>
+        </text>
+        <text id="Employment-Copy" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="475.305" y="329">Employment</tspan>
+        </text>
+        <text id="Cryptocurrency" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="781.14" y="329">Cryptocurrency</tspan>
+        </text>
+        <text id="Online-Purchase" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1079.183" y="329">Online Purchase</tspan>
+        </text>
+        <text id="Employment-Copy-2" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="475.305" y="377">Employment</tspan>
+        </text>
+        <text id="Cryptocurrency" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="781.14" y="377">Cryptocurrency</tspan>
+        </text>
+        <text id="Advanced-Fee-Loan" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1070.377" y="377">Advanced Fee Loan</tspan>
+        </text>
+        <text id="Employment-Copy-3" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="475.305" y="425">Employment</tspan>
+        </text>
+        <text id="Romance" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="485.399" y="473">Romance</tspan>
+        </text>
+        <text id="Investment" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="793.32" y="425">Investment</tspan>
+        </text>
+        <text id="Online-Purchase" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1079.183" y="425">Online Purchase</tspan>
+        </text>
+        <text id="Investment" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="793.32" y="473">Investment</tspan>
+        </text>
+        <text id="Home-Improvement" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1068.004" y="473">Home Improvement</tspan>
+        </text>
+        <text id="Travel-/-Vacation" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="463.451" y="521">Travel / Vacation</tspan>
+        </text>
+        <text id="Home-Improvement" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="767.004" y="521">Home Improvement</tspan>
+        </text>
+        <text id="Romance" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1099.399" y="521">Romance</tspan>
+        </text>
+        <text id="1st" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="503.46" y="193">1st</tspan>
+        </text>
+        <text id="2nd" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="813.228" y="193">2nd</tspan>
+        </text>
+        <text id="3rd" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="1108.272" y="193">3rd</tspan>
+        </text>
+        <text id="20~29" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="157" y="327">20~29</tspan>
+        </text>
+        <text id="30~39" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="157" y="375">30~39</tspan>
+        </text>
+        <text id="40~49" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="157" y="423">40~49</tspan>
+        </text>
+        <text id="50~59" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="157" y="471">50~59</tspan>
+        </text>
+        <text id="&gt;60" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" line-spacing="23" fill="#000000">
+            <tspan x="174" y="519">&gt;60</tspan>
+        </text>
+        <text id="Top-3-Riskiest-Scam" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="30" font-weight="normal" fill="#000000">
+            <tspan x="63" y="86">Top 3 Riskiest Scam Types </tspan>
+            <tspan x="63" y="116">by Age Group</tspan>
+        </text>
+        <line x1="63.587334" y1="146.5" x2="1381.5" y2="146.5" id="Line-3-Copy-6" stroke="#000000" stroke-width="3" stroke-linecap="square"></line>
+        <line x1="63.587334" y1="230.5" x2="1381.5" y2="230.5" id="Line-3-Copy-7" stroke="#000000" stroke-linecap="square"></line>
+        <line x1="63.587334" y1="577.5" x2="1381.5" y2="577.5" id="Line-3-Copy-8" stroke="#000000" stroke-linecap="square"></line>
+        <text id="Scam-Types-Occurrenc" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="16" font-weight="normal" fill="#000000">
+            <tspan x="63" y="610">Scam Types Occurrence</tspan>
+        </text>
+    </g>
+</svg>

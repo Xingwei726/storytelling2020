@@ -5,75 +5,234 @@ var margin = { top: 200, right: 50, bottom: 200, left: 50 },
     width2 = width - margin.left - margin.right,
     height2 = height - margin.top - margin.bottom;
 
+var changeGender1
+var changeGender2
 
 //gender graph
 d3.csv("./data/gender09.csv").then(function(data1) {
     d3.csv("./data/gender19.csv").then(function(data2) {
 
-		var sScale = d3.scaleLinear()
-			           .domain([0, 100])
-			           .range([0, 1000])
+			var sScale = d3.scaleLinear()
+				           .domain([0, 100])
+				           .range([0, 1000])
+	
+			var mScale = d3.scaleLinear()
+				           .domain([0, 300])
+				           .range([0, 800])	    
+	
+	
+			var svg3 = d3.select('#gender')
+				         .append('svg')
+				         .attr('width', "100%")
+				         .attr('height', 750)
 
-		var mScale = d3.scaleLinear()
-			           .domain([0, 300])
-			           .range([0, 800])	    
 
+// gender---susceptibility legend
+	    svg3.append('g')
+	        .append('text')
+			.attr("x", "270px")
+			.attr("y", "100px")
+			.attr("text-anchor", "left")
+		    .attr("font-family", "sans-serif")
+			.style("font-size", "16px")
+		    .attr("fill", "#C373FC")
+			.text("Susceptibility")
 
-		var svg3 = d3.select('#gender')
-			         .append('svg')
-			         .attr('width', "100%")
-			         .attr('height', 750)
-
-    var genderS1= svg3.append('g')
-			.attr("transform", "translate(70,0)")
-			.selectAll('rect')
-			.data(data1)
-			.enter()
-			.append('rect')
-			.attr("x", "200px") 
-			.attr("width", function (d){
-				return sScale(d.susceptibility)
-			})
-			.attr('y', function(d,i){
-				return 120 + i*120
-			})
-			.attr("height", "100px")
-			.attr('fill', '#000000')
+// gender--- Median Money Loss legend
+	    svg3.append('g')
+	        .append('text')
+			.attr("x", "670px")
+			.attr("y", "100px")
+			.attr("text-anchor", "left")
+		    .attr("font-family", "sans-serif")
+			.style("font-size", "16px")
+		    .attr("fill", "#C373FC")
+			.text("Median Money Loss")
 			
-		var genderM1 = svg3.append('g')
-			.attr("transform", "translate(70,0)")
-			.selectAll('rect')
-			.data(data1)
-			.enter()
-			.append('rect')
-			.attr("x", "600px") 
-			.attr("width", function (d){
-				return mScale(d.medianLoss)
-			})
-			.attr('y', function(d,i){
-				return 120 + i*120
-			})
-			.attr("height", "100px")
-			.attr('fill', '#000000')
+//gender--male
+	    svg3.append('g')
+	        .append('text')
+			.attr("x", "160px")
+			.attr("y", "180px")
+			.attr("text-anchor", "left")
+		    .attr("font-family", "sans-serif")
+			.style("font-size", "22px")
+			.style( "font-weight", 800)
+		    .attr("fill", "#000000")
+			.text("Male")
 
-		var sLegend = svg3.append('g')
-			.attr("transform", "translate(70,0)")
-			.selectAll('rect')
-			.data(data1)
-			.enter()
-			.append('rect')
-			.attr("x", "600px") 
-			.attr("width", function (d){
-				return mScale(d.medianLoss)
-			})
-			.attr('y', function(d,i){
-				return 120 + i*120
-			})
-			.attr("height", "100px")
-			.attr('fill', '#000000')
+//gender--female
+	    svg3.append('g')
+	        .append('text')
+			.attr("x", "160px")
+			.attr("y", "300px")
+			.attr("text-anchor", "left")
+		    .attr("font-family", "sans-serif")
+			.style("font-size", "22px")
+			.style( "font-weight", 800)
+		    .attr("fill", "#000000")
+			.text("Female")
+
+			var tooltip = d3.select("#graph1")
+			            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			            .append("div")
+			            .style("opacity", 0)
+			            .style("position", "absolute")
+			            .style("color", "#e8e8e8")
+			            .style("background", "#000000")
+						.style("font-family", "Source Sans Pro")
+						.style("font-size", "14px")
+			            .style("padding", "8px")
+			            .style("z-index", "1000")
+					
+			var mouseover = function (d) {
+				tooltip
+                  .style("opacity", 1)
+                  .html(d.gender+ "<br/>"+ "Susceptibility: "+ d.susceptibility + " %" + "<br/>"+ "Median Money Loss: " + d.medianLoss + " $") 
+                  .style('left', (d3.event.pageX+12) + 'px')
+                  .style('top', (d3.event.pageY) + 'px')
+			    d3.select(this)
+			      .attr('fill', '#C373FC')
+	
+			    
+			}
+			
+			var mouseleave = function (d) {
+				tooltip
+	              .style("opacity", 0)	
+			    d3.select(this)
+			      .attr('fill', '#000000')
+			}
 
 
 
+
+//2009 data				
+
+	        var genderS1= svg3.append('g')
+				.attr("transform", "translate(70,0)")
+				.selectAll('rect')
+				.data(data1)
+				.enter()
+				.append('rect')
+				.attr("x", "200px") 
+				.attr("width", function (d){
+					return sScale(d.susceptibility)
+				})
+				.attr('y', function(d,i){
+					return 120 + i*120
+				})
+				.attr("height", "100px")
+				.attr('fill', '#000000')
+				.attr('rx',5)
+				.attr('ry',5)
+				.style('opacity',0)
+				.on("mouseover",mouseover)
+				.on("mouseleave",mouseleave)
+				
+			var genderM1 = svg3.append('g')
+				.attr("transform", "translate(70,0)")
+				.selectAll('rect')
+				.data(data1)
+				.enter()
+				.append('rect')
+				.attr("x", "600px") 
+				.attr("width", function (d){
+					return mScale(d.medianLoss)
+				})
+				.attr('y', function(d,i){
+					return 120 + i*120
+				})
+				.attr("height", "100px")
+				.attr('fill', '#000000')
+				.style('opacity',0)
+				.attr('rx',5)
+				.attr('ry',5)
+				.on("mouseover",mouseover)
+				.on("mouseleave",mouseleave)
+				
+			// var sLegend = svg3. append('g')
+			// 	.attr("transform", "translate(70,0)")
+			// 	.selectAll('text')
+			// 	.data(data1)
+			// 	.enter()
+			// 	.append('text')
+			// 	.attr("x", "200px") 
+			// 	.attr('y', function(d,i){
+			// 		return 120 + i*120
+			// 	})
+			//     .attr("text-anchor", "left")
+		 //    	.attr("font-family", "sans-serif")
+		 //   	.style("font-size", "22px")
+		 //       .attr("fill", "#FFFFFF")
+		 //   	.text(function (d) {
+			// 	     return d.medianLoss;
+			// 	})
+				
+
+			    
+
+
+//2019 data				
+
+	        var genderS2= svg3.append('g')
+				.attr("transform", "translate(70,0)")
+				.selectAll('rect')
+				.data(data2)
+				.enter()
+				.append('rect')
+				.attr("x", "200px") 
+				.attr("width", function (d){
+					return sScale(d.susceptibility)
+				})
+				.attr('y', function(d,i){
+					return 120 + i*120
+				})
+				.attr("height", "100px")
+				.attr('fill', '#000000')
+				.style('opacity',1)
+				.attr('rx',5)
+				.attr('ry',5)
+				.on("mouseover",mouseover)
+				.on("mouseleave",mouseleave)
+				
+				
+			var genderM2 = svg3.append('g')
+				.attr("transform", "translate(70,0)")
+				.selectAll('rect')
+				.data(data2)
+				.enter()
+				.append('rect')
+				.attr("x", "600px") 
+				.attr("width", function (d){
+					return mScale(d.medianLoss)
+				})
+				.attr('y', function(d,i){
+					return 120 + i*120
+				})
+				.attr("height", "100px")
+				.attr('fill', '#000000')
+				.style('opacity',1)
+				.attr('rx',5)
+				.attr('ry',5)				
+				.on("mouseover",mouseover)
+				.on("mouseleave",mouseleave)	
+
+        changeGender1 = function(data){
+        
+            genderS1.style('opacity',data)
+            genderM1.style('opacity',data)    
+            genderS2.style('opacity',0)    
+            genderM2.style('opacity',0)    
+        } 
+
+        changeGender2 = function(data){
+        
+            genderS1.style('opacity',0)
+            genderM1.style('opacity',0)    
+            genderS2.style('opacity',data)    
+            genderM2.style('opacity',data)    
+        } 
 
 
 
