@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="500px" viewBox="0 0 1440 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>dataSources</title>
+    <desc>Created with Sketch.</desc>
+    <g id="dataSources" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E8E8E8" x="0" y="0" width="1440" height="500"></rect>
+        <text id="Sources" font-family="AGaramondPro-Italic, Adobe Garamond Pro" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+            <tspan x="534" y="57">Sources</tspan>
+        </text>
+        <text id="1.-FTC-(https://www." font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16" fill="#000000">
+            <tspan x="534" y="86">1. FTC (https://www.ftc.gov/enforcement/consumer-sentinel-</tspan>
+            <tspan x="534" y="102">network)</tspan>
+            <tspan x="534" y="118">2. AARP Investment Fraud Vulnerability Study (https://</tspan>
+            <tspan x="534" y="134">www.aarp.org/content/dam/aarp/research/surveys_statistics/econ/</tspan>
+            <tspan x="534" y="150">2017/investment-fraud-vulnerability.doi.10.26419%252Fres.</tspan>
+            <tspan x="534" y="166">00150.001.pdf)</tspan>
+            <tspan x="534" y="182">3. AARP Scam Tracking Map (https://www.aarp.org/money/scams-</tspan>
+            <tspan x="534" y="198">fraud/tracking-map.html#scam-results-table)</tspan>
+            <tspan x="534" y="214">4.Scam Compliance and the Psychology of Persuasion (http://</tspan>
+            <tspan x="534" y="230">healthdocbox.com/Psychology_and_Psychiatry/68046657-Scam-</tspan>
+            <tspan x="534" y="246">compliance-and-the-psychology-of-persuasion-david-modic-a-</tspan>
+            <tspan x="534" y="262">stephen-e-g-lea-b.html)</tspan>
+            <tspan x="534" y="278">5. Romance Scam Data on FTC (https://www.ftc.gov/news-events/</tspan>
+            <tspan x="534" y="294">press-releases/2020/02/new-ftc-data-show-consumers-reported-</tspan>
+            <tspan x="534" y="310">losing-more-200-million)</tspan>
+            <tspan x="534" y="326">6. BBB Scam Tracker Risk Report (https://www.bbb.org/</tspan>
+            <tspan x="534" y="342">globalassets/local-bbbs/council-113/media/bbb-institute/</tspan>
+            <tspan x="534" y="358">riskreport2019/2019-scamtracker-riskreport-final.pdf)</tspan>
+            <tspan x="540.356" y="374.552032"></tspan>
+            <tspan x="540.356" y="390.552032"></tspan>
+        </text>
+        <text id="This-story-was-creat" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16" fill="#000000">
+            <tspan x="63" y="58">This story was created by Xingwei Huang as the final project for </tspan>
+            <tspan x="63" y="74">PSAM 5015 Storytelling with Data at Parsons School of Design.</tspan>
+            <tspan x="69.356" y="90.5520325"></tspan>
+            <tspan x="63" y="106">Data was mostly collected from US governmental organizations and </tspan>
+            <tspan x="63" y="122">non-profit organizations, including: Federal Trade Commission </tspan>
+            <tspan x="63" y="138">(FTC), Federal Bureau of Investigation (FBI) and Better Business </tspan>
+            <tspan x="63" y="154">Bureau (BBB) for which you can find the links to the data in the </tspan>
+            <tspan x="63" y="170">sources section on the right side.</tspan>
+        </text>
+    </g>
+</svg>

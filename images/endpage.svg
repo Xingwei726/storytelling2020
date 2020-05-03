@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="500px" viewBox="0 0 1440 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>endpage</title>
+    <desc>Created with Sketch.</desc>
+    <g id="endpage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E8E8E8" x="0" y="0" width="1440" height="500"></rect>
+        <text id="Too-Cool-To-Be-Scamm" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="30" font-weight="normal" fill="#000000">
+            <tspan x="63" y="148">Too Cool To Be Scammed</tspan>
+        </text>
+        <text id="Main-Takeaway" font-family="AGaramondPro-Italic, Adobe Garamond Pro" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+            <tspan x="63" y="73">Main Takeaway</tspan>
+        </text>
+        <text id="Can" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="30" font-weight="normal" fill="#C373FC">
+            <tspan x="175" y="115">Can</tspan>
+        </text>
+        <text id="The-FTC’s-findings-a" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" line-spacing="16" fill="#000000">
+            <tspan x="63" y="185">The FTC’s findings are backed up by the Better Business Bureau, a </tspan>
+            <tspan x="63" y="201">nonprofit organization that closely tracks scam activity. The Better </tspan>
+            <tspan x="63" y="217">Business Bureau has found that while young Americans typically </tspan>
+            <tspan x="63" y="233">lose considerably less money when they fall prey to a scam, they are </tspan>
+            <tspan x="63" y="249">dramatically more susceptible to doing so.</tspan>
+            <tspan x="69.356" y="265.552032"></tspan>
+            <tspan x="63" y="281">“We were initially surprised by the results,” said Katherine Hutt, the </tspan>
+            <tspan x="63" y="297">Better Business Bureau’s national spokesperson. “For years, the </tspan>
+            <tspan x="63" y="313">stereotype has been the little old lady as scam victim. So we were </tspan>
+            <tspan x="63" y="329">genuinely surprised to see that older Americans basically had gotten </tspan>
+            <tspan x="63" y="345">the message and were less at risk than young people.”</tspan>
+        </text>
+        <path d="M205.724071,120 C201.855235,120.970716 169.693725,128.528356 181.649228,131.860127 C194.073032,135.322404 207.127511,127.403908 220.01061,126.875144 C222.67125,126.765942 215.355301,129.485876 212.924259,130.576498 C203.546554,134.783555 174.753075,139.828152 184.600618,142.760892 C198.246369,146.824792 212.446891,136.727389 226.526103,134.627322 C233.814269,133.540212 212.070101,137.597287 205.010916,139.716474 C202.154486,140.573982 199.456938,141.965712 196.908403,143.518636 C194.842742,144.777326 188.879413,147.725218 191.268451,148.090304 L190.491681,149.888057 C192.988482,150.269612 195.547754,149.590943 198.030032,149.123592 C205.141042,147.784768 212.16702,146.025409 219.235515,144.476318" id="Path" stroke="#C373FC" stroke-width="2"></path>
+    </g>
+</svg>
