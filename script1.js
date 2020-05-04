@@ -259,7 +259,7 @@ d3.csv("./data/ageFTC19.csv").then(function(data3) {
         var mouseover = function (d) {
                tooltip
                   .style("opacity", 1)
-                  .html(d.age+" Susceptibility: <br/>"+ d.susceptibility + " %") 
+                  .html(d.age+" Susceptibility: <br/>"+ d.medianLoss + " %") 
                   .style('left', (d3.event.pageX+12) + 'px')
                   .style('top', (d3.event.pageY) + 'px')
 
@@ -326,7 +326,30 @@ d3.csv("./data/ageFTC19.csv").then(function(data3) {
     	      })
             .attr('fill', '#000000')
             .on("mouseover", mouseover)
-		        .on("mouseleave", mouseleave)
+		    .on("mouseleave", mouseleave)
+		    
+	      //medianLoss bars legend
+  		  svg4.append('g')
+  		      .selectAll('text')
+  		      .data(data3)
+  		      .enter()
+  		      .append('text')
+  		      .attr('x', function(d,i) {
+  			        return 50+i*200+88;
+      	      })
+  		      .attr('y', function(d) {
+			        return yScale(d.medianLoss)+420;
+    	      })
+  		      .attr('fill', '#FFFFFF')
+  		      .attr("text-anchor", "left")
+		        .attr("font-family", "Source Sans Pro")
+		        .attr('font-weight',600)
+		        .style("font-size", "14px")
+		        .text(function(d,i) {
+			   	     return d.medianLoss;
+		        })		
+		    
+		    
 	
   		  //susceptibility dots    
   		  svg4.append('g')

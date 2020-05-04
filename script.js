@@ -36,7 +36,7 @@ function handleStepEnter(response) {
     } else if (response.index  < 2) {  
       figure.select("h6").text("Scam [n.]: A scam is a fraud ulent scheme generally involving money and some sort of business transaction.");
     } else if (response.index  < 3)  {
-      figure.select("h6").text("Susceptibility [n.]: The state of being very likely to be influenced, harmed or affected by sth.");
+      figure.select("h6").text("Susceptibility [n.]: A tendency to be affected by something. The state of being very likely to be influenced, harmed or affected by something.");
     } else {
       figure.select("h6").text("Below you will see two real-life scenarios, pick an answer from the dialogue box.");
     }
@@ -189,7 +189,7 @@ d3.csv("./data/top10.csv").then(function(data) {
 			.attr("font-family", "EB Garamond")
 			.style("font-size", "30px")
 		    .attr("fill", "#e8e8e8")
-			.text("Top 10 Rickest Scams")	
+			.text("Top 10 Riskiest Scams")	
 
 // risk calculation formula
 
